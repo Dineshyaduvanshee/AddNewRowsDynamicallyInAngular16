@@ -1,0 +1,106 @@
+<h1>!!Welcome to Indicosmic Pvt Ltd!!</h1>
+<form novalidate [formGroup]="FormGroup" style="text-align: center;">
+  <div class="row">
+    <div class="col-xs-12 form-group marl40">
+      <div style="margin-top: 0px;">
+        <ng-container *ngIf="FormGroup?.controls.itemRows != null">
+          <div *ngFor="let itemRows of FormGroup?.controls.itemRows.controls; let i = index" [formGroupName]="i">
+            <div class="row">
+              <div class="row panel-heading text-bold" style="text-align: center; margin: 0px; margin-left: 10px;">
+                !!Form Details!!
+              </div>
+              <div class="col-md-2 form-group">
+                <!-- Use matInput here -->
+                <input matInput placeholder="Name :" formControlName="Name">
+              </div>
+              <div class="col-md-2 form-group">
+                <input matInput placeholder="Roll No" formControlName="Rollno">
+              </div>
+              <div class="col-md-2 form-group">
+                <input matInput placeholder="Class" formControlName="Class">
+              </div>
+              <div class="col-md-2 form-group">
+                <input matInput placeholder="Mobile No" formControlName="MobileNo">
+              </div>
+              <div class="col-md-2 form-group">
+                <button
+                  (click)="deleteRow(i)"
+                  class="btn btn-danger"
+                  [disabled]="FormGroup.invalid"
+                  style="height: 40; width: 10.5pc; text-align: center;"
+                >
+                  X
+                </button>
+              </div>
+              <div class="col-md-2 form-group" style="text-align: center ;">
+                <button
+                  type="button"
+                  
+                  (click)="addNewRow(); printData()"
+                  [disabled]="FormGroup.invalid"
+                  class="btn btn-primary"
+                >
+                  Add New Row
+                </button>
+              </div>
+              <!-- <div class="col-md-2 form-group" style="text-align: center ;">
+                <button
+                  type="button"
+                  (click)="printData()"
+                  
+                  class="btn btn-primary"
+                >
+                  Show Data
+                </button>
+              </div> -->
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Inbox Section -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header" style="font-size: medium; color: blueviolet;font-style: bold;">
+          AI-Powered Roadside Assistance: Predictive Maintenance, Real-Time Assistance, and More!
+        </div>
+        <div class="card-body">
+          <!-- Your inbox content goes here -->
+          <ul class="list-group">
+            <li class="list-group-item">In recent years, the automotive industry has witnessed significant advancements in artificial intelligence (AI) technology, revolutionizing the way we experience and interact with our vehicles. One such application is AI-powered roadside assistance, which combines predictive maintenance, real-time assistance, and more. This cutting-edge technology is transforming the traditional concept of roadside assistance, offering proactive solutions, reducing breakdowns, and enhancing overall road safety. In this article, we will explore the exciting possibilities of AI-powered roadside assistance and its potential to revolutionize the automotive industry.</li>
+            <!-- <li class="list-group-item">Message 2</li> -->
+            <!-- Add more messages as needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outbox Section -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header" style="font-size: medium; color: blueviolet;font-style: bold;">
+          Harnessing IoT devices for smarter roadside assistance operations, providing timely support with cutting-edge technology
+        </div>
+        <div class="card-body">
+          <!-- Your outbox content goes here -->
+          <ul class="list-group">
+            <li class="list-group-item">Harnessing IoT devices for smarter roadside assistance operations, 
+              providing timely support with cutting-edge technology</li>
+            <li class="list-group-item">As technology continues to reshape industries, 
+              the Internet of Things (IoT) has emerged as a driving force behind transformative changes.
+               One area where IoT devices have truly made their mark is in revolutionizing roadside...</li>
+              <li class="list-group-item">Furthermore, the data collected through IoT devices can provide valuable insights for continuous improvement.
+                 Analyzing vehicle performance, maintenance patterns, and road conditions allows providers to optimize their operations, anticipate issues, and refine their services further.</li>
+            <!-- Add more sent messages as needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

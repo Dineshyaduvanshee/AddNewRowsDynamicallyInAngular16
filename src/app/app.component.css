@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    background-color: azure;
+}
+table{
+    text-align: center;
+    align-content: center;
+   /* // align-content: right; */
+    text-indent: 0ch;
+    background-color: blueviolet;
+}
